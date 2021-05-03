@@ -1,0 +1,12 @@
+<% @comments.each do |comment| %>
+          <p>
+          <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+          <%= comment.text %>
+          </p>
+            <li class="comments_list">
+              <%= " コメントのテキスト "%>
+              <%= link_to "（ ユーザー名 ）", root_path, class: :comment_user %>
+            </li>
+          <% end %>
+
+<%= "#{comment.user_id}" %>
